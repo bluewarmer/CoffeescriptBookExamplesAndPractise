@@ -15,8 +15,9 @@ shop = {
 
 nameElement = document.getElementById("owner_name")
 nameElement.innerHTML = shop.owner.name;
-document.title = shop.owner.name + "'s Pet Shop"
-petOutput = ("<li>" + pet.name + "</li>" for pet in shop.animals )
+document.title = "#{shop.owner.name}'s Pet Shop"
+petOutput = for pet in shop.animals 
+	"<li>#{pet.name.toUpperCase()}</li>" 
 avaiablePets = document.getElementById("available_pets")
 avaiablePets.innerHTML = petOutput.join ""
 
